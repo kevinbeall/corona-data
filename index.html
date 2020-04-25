@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>Coronavirus</title>
+</head>
+
+<body>
+  <header>
+    <div class="jumbotron">
+      <h1 class="display-3">COVID-19</h1>
+      <p class="lead">Check on the state of COVID-19 throughout the world with up to date information from the John Hopkins University.</p>
+      <hr class="my-4">
+      <p>Search for any country to get an updated total for confirmed cases, recovery rate and total deaths.</p>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control searchInput" placeholder="Search for a Country..." aria-label="Recipient's username"
+          aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary searchButton" type="button" id="button-addon2">Search</button>
+        </div>
+      </div>
+      <div class="alert alert-warning notFound" role="alert">
+        Country not found, please search again.
+      </div>
+      <!-- <div class="container-fluid">
+        <div class="row justify-content-around mb-4">
+          <a class="btn btn-primary btn-lg" href="#" role="button">United Kingdom</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">United States</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Austrailia</a>
+        </div>
+        <div class="row justify-content-between mb-4">
+          <a class="btn btn-primary btn-lg offset-sm-1" href="#" role="button">China</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Italy</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Spain</a>
+        </div>
+        <div class="row justify-content-between mb-4">
+          <a class="btn btn-primary btn-lg" href="#" role="button">France</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Germany</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Switzerland</a>
+        </div>
+        <div class="row justify-content-between mb-4">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Canada</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Brazil</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Sweden</a>
+        </div>
+      </div> -->
+    </div>
+  </header>
+  <main>
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border loading" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div class="card text-center results-section hidden">
+      <div class="card-body">
+        <div class="container-fluid">
+          <div class="row ml-3 mb-4">
+            <h1 class="display-4 display-country">United Kingdom</h1>
+          </div>
+          <div class="row justify-content-around">
+            <div class="card text-white bg-dark mb-3 col-md-6 col-sm-4 col-xl-4" style="max-width: 25rem;">
+              <div class="card-header">
+                <span class="data-title text-primary">
+                  <strong>Confirmed:</strong>
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="confirmed-value">1234</span>
+                </h5>
+                <p class="card-text text-warning">
+                  An increase of
+                  <span class="confirmed-increase">0</span> in 24 hours
+                </p>
+              </div>
+            </div>
+            <div class="card text-white bg-dark mb-3 col-md-6 col-sm-4" style="max-width: 25rem;">
+              <div class="card-header">
+                <span class="data-title text-success">
+                  <strong>Recovered:</strong>
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="recovered-value">1234</span>
+                </h5>
+                <p class="card-text text-success">An increase of
+                  <span class="recovered-increase">0</span> in 24 hours</p>
+              </div>
+            </div>
+            <div class="card text-white bg-dark mb-3 col-md-6 col-sm-4" style="max-width: 25rem;">
+              <div class="card-header">
+                <span class="data-title text-primary">
+                  <strong>Deaths:</strong>
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="deaths-value">1234</span>
+                </h5>
+                <p class="card-text text-warning">An increase of
+                  <span class="deaths-increase">0</span> in 24 hours</p>
+              </div>
+            </div>
+          </div>
+          <div class="graph">
+            <h2>Graph Title</h2>
+            <ul class='y-axis'>
+              <li class="vol-5">25000</li>
+              <li class="vol-4">20000</li>
+              <li class="vol-3">15000</li>
+              <li class="vol-2">10000</li>
+              <li class="vol-1">5000</li>
+              <li class="zero">0</li>
+            </ul>
+            <ul class="x-axis">
+              <li class="day-1 day">5</li>
+              <li class="day-2 day">10</li>
+              <li class="day-3 day">15</li>
+              <li class="day-4 day">20</li>
+              <li class="day-5 day">25</li>
+              <li class="day-6 day">30</li>
+              <li class="day-7 day">35</li>
+              <li class="day-8 day">40</li>
+              <li class="day-9 day">45</li>
+              <li class="day-10 day">50</li>
+            </ul>
+            <ul class="data-column">
+              <li class="data-1 data-bar"></li>
+              <li class="data-2 data-bar"></li>
+              <li class="data-3 data-bar"></li>
+              <li class="data-4 data-bar"></li>
+              <li class="data-5 data-bar"></li>
+              <li class="data-6 data-bar"></li>
+              <li class="data-7 data-bar"></li>
+              <li class="data-8 data-bar"></li>
+              <li class="data-9 data-bar"></li>
+              <li class="data-10 data-bar"></li>
+            </ul>
+            <div class="graphVisual">
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-footer text-muted">
+        <span class="last-updated"></span>
+      </div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

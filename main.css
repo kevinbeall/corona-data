@@ -1,0 +1,70 @@
+.hidden, .loading, .notFound {
+  display: none;
+}
+
+.graph{
+  display: inline-block;
+  width: 90%;
+  max-width: 600px;
+  height: 250px;
+  margin: auto;
+  position: relative;
+}
+
+.graphVisual {
+  display: inline-block;
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+}
+
+.y-axis {
+  position: absolute;
+  top: 30px;
+  left: -40px;
+  font-size: 0.5em;
+}
+
+.y-axis li {
+  list-style: none;
+  line-height: 39px
+}
+
+.x-axis {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  font-size: 0.4em;
+}
+
+.x-axis li {
+  display: inline-block;
+  width: 10px;
+  margin-left: 40px;
+}
+
+.data-column {
+  position: absolute;
+  top: 195px - 160px;
+  left: 0;
+  text-align: right;
+}
+
+.data-column li {
+  display: inline-block;
+  width: 10px;
+  height: 200px;
+  background-color: red;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media(max-width: 740px) {
+  .graph {
+    display: none;
+  }
+}
