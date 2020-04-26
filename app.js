@@ -14,7 +14,41 @@ const spinner = document.querySelector('.loading');
 const notFound = document.querySelector('.notFound');
 const dataBars = document.querySelectorAll('.data-bar');
 const dayLabels = document.querySelectorAll('.day');
+const ctx = document.getElementById('myChart').getContext('2d');
 let dataBarOffset = 0;
+
+function createChart(labels, deaths, confirmed, recovered) {
+  const chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Deaths',
+        backgroundColor: 'transparent',
+        borderColor: '#D92818',
+        data: deaths
+      }, {
+        label: 'Confirmed',
+        backgroundColor: 'transparent',
+        borderColor: '#F29F05',
+        data: confirmed
+      }, {
+        label: 'Recovered',
+        backgroundColor: 'transparent',
+        borderColor: '#5EAE01',
+        data: recovered
+      }]
+    },
+
+    // Configuration options go here
+    options: {}
+  });
+}
+
+
 
 dataBars.forEach(bar => {
   bar.style['margin-left'] = `${40 - dataBarOffset}px`;
@@ -34,17 +68,41 @@ function createGraph(data) {
   console.log(data);
   const length = data.length;
   const stepValue = Math.floor((length - 1) / 10);
-  const labels = [stepValue, stepValue * 2, stepValue * 3, stepValue * 4, stepValue * 5, stepValue * 6, stepValue * 7, stepValue * 8, stepValue * 9, data.length - 1];
-  const combined = [data[stepValue], data[stepValue * 2], data[stepValue * 3], data[stepValue * 4], data[stepValue * 5], data[stepValue * 6], data[stepValue * 7], data[stepValue * 8], data[stepValue * 9], data[length - 1]];
+  const labels = [];
+  const deathsData = data.map(item => {
+    return item.Deaths;
+  })
+  const confirmedData = data.map(item => {
+    return item.Confirmed;
+  })
+  const recoveredData = data.map(item => {
+    return item.Recovered;
+  })
+  const combined = [
+    data[stepValue],
+    data[stepValue * 2],
+    data[stepValue * 3],
+    data[stepValue * 4],
+    data[stepValue * 5],
+    data[stepValue * 6],
+    data[stepValue * 7],
+    data[stepValue * 8],
+    data[stepValue * 9],
+    data[length - 1]
+  ];
   let i = 0;
   const topConfirmed = Math.round(combined[9].Confirmed / 50000) * 50000 + 50000;
 
+  for (let i = 1; i < data.length; i++) {
+    labels.push(i);
+  }
 
 
-  dayLabels.forEach(day => {
-    day.textContent = labels[i];
-    i++;
-  });
+  // dayLabels.forEach(day => {
+  //   day.textContent = labels[i];
+  //   i++;
+  // });
+  createChart(labels, deathsData, confirmedData, recoveredData);
   console.log(labels, combined);
 }
 

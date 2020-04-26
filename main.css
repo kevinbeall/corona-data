@@ -63,6 +63,11 @@
   box-sizing: border-box;
 }
 
+.chart {
+  max-width: 1000px;
+  margin: auto;
+}
+
 @media(max-width: 740px) {
   .graph {
     display: none;

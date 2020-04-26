@@ -72,11 +72,11 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">
-                  <span class="confirmed-value">1234</span>
+                  <span class="confirmed-value"></span>
                 </h5>
                 <p class="card-text text-warning">
                   An increase of
-                  <span class="confirmed-increase">0</span> in 24 hours
+                  <span class="confirmed-increase"></span> in 24 hours
                 </p>
               </div>
             </div>
@@ -88,10 +88,10 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">
-                  <span class="recovered-value">1234</span>
+                  <span class="recovered-value"></span>
                 </h5>
                 <p class="card-text text-success">An increase of
-                  <span class="recovered-increase">0</span> in 24 hours</p>
+                  <span class="recovered-increase"></span> in 24 hours</p>
               </div>
             </div>
             <div class="card text-white bg-dark mb-3 col-md-6 col-sm-4" style="max-width: 25rem;">
@@ -102,14 +102,17 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">
-                  <span class="deaths-value">1234</span>
+                  <span class="deaths-value"></span>
                 </h5>
                 <p class="card-text text-warning">An increase of
-                  <span class="deaths-increase">0</span> in 24 hours</p>
+                  <span class="deaths-increase"></span> in 24 hours</p>
               </div>
             </div>
           </div>
-          <div class="graph">
+          <div class="chart">
+            <canvas id="myChart" width="400" height="200"></canvas>
+          </div>
+          <!-- <div class="graph">
             <h2>Graph Title</h2>
             <ul class='y-axis'>
               <li class="vol-5">25000</li>
@@ -146,7 +149,7 @@
             <div class="graphVisual">
 
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
@@ -158,6 +161,7 @@
   <footer>
 
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
