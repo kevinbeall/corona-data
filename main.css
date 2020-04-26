@@ -66,6 +66,7 @@
 .chart {
   max-width: 1000px;
   margin: auto;
+  min-height: 400px;
 }
 
 @media(max-width: 740px) {
