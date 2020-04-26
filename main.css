@@ -65,12 +65,13 @@
 
 .chart {
   max-width: 1000px;
+  min-width: 300px;
   margin: auto;
-  min-height: 400px;
+
 }
 
 @media(max-width: 740px) {
-  .graph {
+  .chart {
     display: none;
   }
 }
